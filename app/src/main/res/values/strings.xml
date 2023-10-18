@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Drawerlayout And Navigationview</string>
+    <string name="open">OPEN\n</string>
+    <string name="close">CLOSE\n</string>
+</resources>

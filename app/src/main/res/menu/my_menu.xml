@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:title="Username"
+        android:id="@+id/username"
+        android:icon="@drawable/username"/>
+
+    <item
+        android:title="Password"
+        android:id="@+id/password"
+        android:icon="@drawable/password"/>
+
+    <item
+        android:title="Number"
+        android:id="@+id/number"
+        android:icon="@drawable/number"/>
+    <item
+        android:title="Address"
+        android:id="@+id/address"
+        android:icon="@drawable/address"/>
+
+    <item
+        android:title="City"
+        android:id="@+id/city"
+        android:icon="@drawable/city"/>
+
+    <item
+        android:title="Pin"
+        android:id="@+id/pin"
+        android:icon="@drawable/pin"/>
+
+    <item
+        android:title="State"
+        android:id="@+id/state"
+        android:icon="@drawable/state"/>
+
+
+</menu>
