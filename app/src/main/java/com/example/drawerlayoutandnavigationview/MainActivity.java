@@ -18,6 +18,16 @@ public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
     NavigationView navigationView;
 
+    /*
+    activity_main.xml...DrawerLayout...Toolbar And NavigationView
+
+    New Layout Resource---File my_header.xml   \\Header:-Gmail Logo And Gmail Text (Gmail Application)
+
+    res---Android Resource Directory---menu---New---Menu Resource File---my_menu.xml   \\Menu:-Allinboxes,Primary,Social,...,Help (Gmail Application)
+
+    NavigationView In my_header.xml And my_menu.xml File Are Declare
+     */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "State", Toast.LENGTH_SHORT).show();
 
                 }
-                drawerLayout.closeDrawers();
+                drawerLayout.closeDrawers();  //closeDrawers()
 
 
                 return false;
