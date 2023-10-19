@@ -44,9 +44,9 @@ public class MainActivity extends AppCompatActivity {
         navigationView = findViewById(R.id.navigationView);
         bottomNav = findViewById(R.id.bottomNav);
 
+        //Navigation Syntax
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(MainActivity.this,drawerLayout,toolbar,R.string.open,R.string.close);
         actionBarDrawerToggle.syncState();
-
 
         //Fragment Syntax
         getSupportFragmentManager().beginTransaction().replace(R.id.showFrag,new ChatFragment()).commit();

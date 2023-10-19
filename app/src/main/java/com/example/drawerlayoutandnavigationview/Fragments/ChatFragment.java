@@ -38,7 +38,7 @@ public class ChatFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_chat, container, false);
 
         recyclerView = view.findViewById(R.id.recyclerView);
-
+                                                                              //
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(linearLayoutManager);
 
@@ -47,8 +47,7 @@ public class ChatFragment extends Fragment {
 
         recyclerView.setAdapter(appAdapter);
 
-
-        return view; //return view;
+        return view;
 
     }
 }
