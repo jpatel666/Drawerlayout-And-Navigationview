@@ -3,38 +3,20 @@
 
 
     <item
-        android:title="Username"
-        android:id="@+id/username"
-        android:icon="@drawable/username"/>
+        android:title="Chat"
+        android:id="@+id/chat"
+        android:icon="@drawable/chat"/>
 
     <item
-        android:title="Password"
-        android:id="@+id/password"
-        android:icon="@drawable/password"/>
+        android:title="Status"
+        android:id="@+id/status"
+        android:icon="@drawable/status"/>
 
     <item
-        android:title="Number"
-        android:id="@+id/number"
-        android:icon="@drawable/number"/>
-    <item
-        android:title="Address"
-        android:id="@+id/address"
-        android:icon="@drawable/address"/>
+        android:title="Call"
+        android:id="@+id/call"
+        android:icon="@drawable/call"/>
 
-    <item
-        android:title="City"
-        android:id="@+id/city"
-        android:icon="@drawable/city"/>
-
-    <item
-        android:title="Pin"
-        android:id="@+id/pin"
-        android:icon="@drawable/pin"/>
-
-    <item
-        android:title="State"
-        android:id="@+id/state"
-        android:icon="@drawable/state"/>
 
 
 </menu>

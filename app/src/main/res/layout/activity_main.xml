@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     android:id="@+id/drawerLayout"
     tools:context=".MainActivity">
@@ -13,14 +14,39 @@
        android:orientation="vertical">
 
        <androidx.appcompat.widget.Toolbar
-           app:title="@string/app_name"
            app:titleTextColor="@color/white"
+           app:title="@string/app_name"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:id="@+id/toolBar"
            android:background="#03A9F4"/>
 
+       <LinearLayout
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:id="@+id/showFrag"
+           android:layout_weight="1"
+           android:layout_height="match_parent"/>
+
+
+       <com.google.android.material.bottomnavigation.BottomNavigationView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@color/white"
+           android:id="@+id/bottomNav"
+           app:menu="@menu/my_menu"/>
+
    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
     
     <com.google.android.material.navigation.NavigationView
         android:layout_width="match_parent"

@@ -10,6 +10,10 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.drawerlayoutandnavigationview.Fragments.CallFragment;
+import com.example.drawerlayoutandnavigationview.Fragments.ChatFragment;
+import com.example.drawerlayoutandnavigationview.Fragments.StatusFragment;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     Toolbar toolbar;
     NavigationView navigationView;
+
+    BottomNavigationView bottomNav;
 
     /*
     activity_main.xml...DrawerLayout...Toolbar And NavigationView
@@ -36,9 +42,13 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawerLayout);
         toolbar = findViewById(R.id.toolBar);
         navigationView = findViewById(R.id.navigationView);
+        bottomNav = findViewById(R.id.bottomNav);
 
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(MainActivity.this,drawerLayout,toolbar,R.string.open,R.string.close);
         actionBarDrawerToggle.syncState();
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.showFrag,new ChatFragment()).commit();
+
 
         /*
         Button btn;
@@ -53,37 +63,40 @@ public class MainActivity extends AppCompatActivity {
         });
          */
 
+        bottomNav.setOnItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if(item.getItemId()==R.id.chat){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.showFrag,new ChatFragment()).commit();
+                }
+                else if(item.getItemId()==R.id.status){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.showFrag,new StatusFragment()).commit();
+
+                }
+                else if(item.getItemId()==R.id.call){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.showFrag,new CallFragment()).commit();
+
+                }
+                return true;
+            }
+        });
+
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if(item.getItemId()==R.id.username){
-                    Toast.makeText(MainActivity.this, "Username", Toast.LENGTH_SHORT).show();
+                if(item.getItemId()==R.id.chat){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.showFrag,new ChatFragment()).commit();
                 }
-               else if(item.getItemId()==R.id.password){
-                    Toast.makeText(MainActivity.this, "Password", Toast.LENGTH_SHORT).show();
+               else if(item.getItemId()==R.id.status){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.showFrag,new StatusFragment()).commit();
 
                 }
-                else if(item.getItemId()==R.id.number){
-                    Toast.makeText(MainActivity.this, "Number", Toast.LENGTH_SHORT).show();
+                else if(item.getItemId()==R.id.call){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.showFrag,new CallFragment()).commit();
 
                 }
-                else if(item.getItemId()==R.id.address){
-                    Toast.makeText(MainActivity.this, "Address", Toast.LENGTH_SHORT).show();
 
-                }
-                else if(item.getItemId()==R.id.city){
-                    Toast.makeText(MainActivity.this, "City", Toast.LENGTH_SHORT).show();
-
-                }
-                else if(item.getItemId()==R.id.pin){
-                    Toast.makeText(MainActivity.this, "Pin", Toast.LENGTH_SHORT).show();
-
-                }
-                else if(item.getItemId()==R.id.state){
-                    Toast.makeText(MainActivity.this, "State", Toast.LENGTH_SHORT).show();
-
-                }
-                drawerLayout.closeDrawers();  //closeDrawers()
+              drawerLayout.closeDrawers();  //closeDrawers()
 
 
                 return false;
