@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(MainActivity.this,drawerLayout,toolbar,R.string.open,R.string.close);
         actionBarDrawerToggle.syncState();
 
+
+        //Fragment Syntax
         getSupportFragmentManager().beginTransaction().replace(R.id.showFrag,new ChatFragment()).commit();
 
 
@@ -97,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
               drawerLayout.closeDrawers();  //closeDrawers()
-
 
                 return false;
             }

@@ -21,10 +21,20 @@ public class ChatFragment extends Fragment {
     int[] userimg = {R.drawable.kohli,R.drawable.kohli,R.drawable.kohli,R.drawable.kohli,R.drawable.kohli,R.drawable.kohli,R.drawable.kohli,R.drawable.kohli,R.drawable.kohli,R.drawable.kohli,R.drawable.kohli,R.drawable.kohli,R.drawable.kohli,R.drawable.kohli,R.drawable.kohli};
 
     String[] username = {"Jimmy","Chirag","Jaydeep","Yash","Rupin","Tushar","Ashish","Heet","Dishant","Sandeep","Akshay","Raj","Khilan","Rutvik","Kevin"};
-    @Override
+
+
+    /*
+    New---Fragment---Fragment(Blank)
+                                                               //
+    All Comments And Method etc... All Remove But Only onCreateView(LayOut..) Method As It Is
+
+                             //
+    Fragment In Context:-getActivity()
+    */
+    @Override        //
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_chat, container, false);
 
         recyclerView = view.findViewById(R.id.recyclerView);
@@ -32,11 +42,13 @@ public class ChatFragment extends Fragment {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        AppAdapter appAdapter = new AppAdapter(getActivity(),userimg,username);
+                                                    //
+        AppAdapter appAdapter = new AppAdapter(getActivity(),userimg,username);     //Fragment In Context:-getActivity()
+
         recyclerView.setAdapter(appAdapter);
 
 
-        return view;
+        return view; //return view;
 
     }
 }
