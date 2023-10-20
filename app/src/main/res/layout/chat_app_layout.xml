@@ -31,7 +31,6 @@
             android:layout_margin="15dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tvUsername"/>
@@ -40,10 +39,5 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="285dp"
-        android:layout_height="1dp"
-        android:layout_gravity="end"
-        android:background="#BEBEBE"/>
 
 </LinearLayout>
