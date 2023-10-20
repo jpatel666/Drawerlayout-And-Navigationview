@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         navigationView = findViewById(R.id.navigationView);
         bottomNav = findViewById(R.id.bottomNav);
 
-        //Navigation Syntax
+        //Drawer Syntax
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(MainActivity.this,drawerLayout,toolbar,R.string.open,R.string.close);
         actionBarDrawerToggle.syncState();
 
