@@ -46,10 +46,4 @@
         android:layout_gravity="end"
         android:background="#BEBEBE"/>
 
-
-
-
-
-
-
 </LinearLayout>
